@@ -69,7 +69,7 @@ for i = 1:resSize
     num = randperm(resSize,k);
     adj1(i,num) = 1;
 end
-% Wres1 = normrnd(0,1,[resSize resSize]); %生成正态分布随机数
+% Wres1 = normrnd(0,1,[resSize resSize]); 
 Wres1 = unifrnd(-1,1,[resSize resSize]);
 Wres1 = adj1.*Wres1 ;
 SR = max(abs(eig(Wres1))) ;
@@ -113,7 +113,7 @@ for t =start:T-1
         forecast_x(1,:) = x_unscented(1,:) + dt*10*(x_unscented(2,:)-x_unscented(1,:));
 %     RR1(:,t+1)=rt;
 %     RR2(:,t+1)=rr1;  
-%     forecast_x(2,:) = x_unscented(2,:) + dt*( x_unscented(1,:).*(28 - x_unscented(3,:)) - x_unscented(2,:));%差分方程
+%     forecast_x(2,:) = x_unscented(2,:) + dt*( x_unscented(1,:).*(28 - x_unscented(3,:)) - x_unscented(2,:));
 %     forecast_x(3,:) = x_unscented(3,:) + dt*( x_unscented(1,:).*x_unscented(2,:) - 8/3.*x_unscented(3,:));
     
     mean_x = forecast_x*weights';

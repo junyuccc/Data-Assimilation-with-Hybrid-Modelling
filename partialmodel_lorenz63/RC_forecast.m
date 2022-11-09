@@ -1,6 +1,5 @@
 function [forecast_x,rt] = RC_forecast(rt,x_unscented,Win,Wres,Wout,resSize,gamma)
 %RC_FORECAST: updating the state using the trained RC  
-%   此处显示详细说明
 [m,n] = size(x_unscented);
 forecast_x = zeros(m,n);
 rr=zeros(resSize,n);

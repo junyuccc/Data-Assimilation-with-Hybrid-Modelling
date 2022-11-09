@@ -1,6 +1,5 @@
 function [Wout,rtotal,traindata,trainoutput] = RC_train(Data,Win,Wres,resSize,gamma,initialen,beta)
 %RC_train:set up the function of RC training
-%   此处显示详细说明
 [~,T] = size(Data);
 trainlen = T-initialen;
 len = initialen + trainlen;
